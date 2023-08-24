@@ -23,8 +23,8 @@
             </div>
             <div id="ExportWrapper">
                 <input type="text" id="URL">
-                <button id="Export">Export</button>
-                <div id="Loading">Loading</div>
+                <button id="Export">Exporter</button>
+                <div id="Loading">En cours...</div>
             </div>
             <button id="StartBtn"></button>
             <div id="InputList"></div>
@@ -406,7 +406,7 @@
 
                         context.font = "bold 24px Arial";
                         context.fillStyle = '#000000';
-                        context.fillText('Kinklist ' + username, 5, 25);
+                        context.fillText('Auto-evaluation ' + username, 5, 25);
 
                         inputKinks.drawLegend(context);
                         return { context: context, canvas: canvas };
@@ -454,7 +454,7 @@
                         }
                     },
                     export: function(){
-                        var username = prompt("Please enter your name");
+                        var username = prompt("Indiquer nom prenom");
                         if(typeof username !== 'string') return;
                         else if (username.length ) username = '(' + username + ')';
 
